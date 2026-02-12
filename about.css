@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1A4D8C;
+    --primary-light: #588CCC;
+    --text-dark: #1a1a1a;
+    --text-light: #444;
+    --bg-light: #f9f9f9;
+    --bg-card: #f5f5f5;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--white);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.menu a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: var(--primary);
+}
+
+/* Hero */
+.hero {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 80px;
+}
+
+.hero h1 {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.95;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text p {
+    font-size: 1.18rem;
+    max-width: 780px;
+    margin: 0 auto 1.2rem;
+    opacity: 0.95;
+}
+
+.map {
+    margin: 2.5rem auto 1rem; 
+    max-width: 900px; 
+    width: 100%; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+
+
+/* Cards / Activities */
+.activities-section {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.activities-section h2 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: all 0.25s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    font-size: 3.2rem;
+    margin-bottom: 1.2rem;
+    color: var(--primary);
+}
+
+/* Contact section */
+.contact-section {
+    padding: 90px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.left h3 {
+    color: var(--primary);
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+    margin: 1.2rem 0 2rem;
+}
+
+.contact-info p {
+    margin: 0.9rem 0;
+    font-size: 1.05rem;
+}
+
+.right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 1.4rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.btn {
+    padding: 14px 36px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #163f73;
+}
+
+/* Content section (About page) */
+.content-section {
+    padding: 80px 0;
+}
+
+.content-section h2 {
+    color: var(--primary);
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 0 0 1.8rem;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 2.2rem;
+    border-radius: 10px;
+    margin: 0 auto 3.5rem;
+    max-width: 760px;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+/* Team */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.2rem;
+    margin-top: 2.5rem;
+}
+
+.team-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 2.2rem 1.6rem;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    margin: 0 auto 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2rem;
+    color: #777;
+}
+
+.name {
+    color: var(--primary);
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2.8rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 840px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1.2rem;
+        height: auto;
+        padding: 1.4rem 0;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.4rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero {
+        padding: 80px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}
